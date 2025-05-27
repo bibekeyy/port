@@ -6,14 +6,20 @@
   box-sizing: border-box;
 }
 .welcome{
-  display: flex;
-  position: absolute;
-  font-family: Georgia ;
-  text-decoration: double;
-  font-weight: 700;
+  font-family: "Poppins" ;
   top: 300px;
-  color: #000;
-  font-size: clamp(16px, 6vw, 28px);
+  color: white;
+  text-align: left;
+  padding: 20px;
+  font-size: 30px;
+  text-shadow:0 0 5px #FAF0E6;
+  text-align: center;
+}
+
+.weltext{
+  max-width: 700px;
+  margin: 0 auto;
+  color: white;
 }
 
 .logo{
@@ -28,7 +34,7 @@
 
 header{
   position: absolute;
-  background-color: #352F44 ;
+  background-color: #150050 ;
   top: 0;
   left: 0;
   height: 70px;
@@ -50,6 +56,7 @@ header{
   text-align: end ;
   z-index: 100;
   text-shadow: black 0 0 2px;
+  position: sticky;
 }
 
 .navi li {
@@ -71,30 +78,20 @@ header{
 {
   cursor: none;
   color: #ffffff;
-  background: #000;
+  background: #FB2576;
 }
 
 .navi li a.active
 {
   color: #ffffff;
-  background: #5C5470;
+  background: #333;
 }
-
-.image3{
-  position: relative;
-  right: -110px;
-  top: -30px;
-  position:inherit;
-  padding: 0px;
-  max-width: 100%;
-}
-
 
 body {
   margin: 0;
   min-height: 100vh;
   cursor: none;
-  background-color: #FAF0E6;
+  background-color: black;
   scroll-behavior: smooth;
   overflow-y: auto;
 }
@@ -112,27 +109,32 @@ body {
   box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.4);
   z-index: 99999;
 
-  /* Invert blend effect */
   mix-blend-mode: difference;
 }
 
-/* Grow effect */
 .cursor-grow {
   width: 50px;
   height: 50px;
   box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.6);
 }
 
-section{
-user-select: none;
-position: absolute;
-width: 100%;
-height: 750px;
-padding-top: 120px;
-display: flex;
-background-image: #FAF0E6;
-color: white;
-
+.intro{
+ user-select: none;
+  position: absolute;
+  height: 750px;
+  padding-top: 120px;
+  display: flex;
+  color: white;
+  gap: 150px;
+}
+.poto{
+  width: 300px;
+  height: 300px;
+  background-image: url(imgs/cropped.svg);
+  border-radius: 50%;
+  background-position: center;
+  background-size: 600px;
+  padding: 250px 250px;
 }
 
 .draggable-window {
@@ -181,63 +183,33 @@ color: white;
   cursor: none;
 }
 
-.para{
-  padding-top: 180px;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
+.verticalline{
+   width: 250px;
+   height: 500px;
+   position: absolute;
+   left: 16%;
+   top: 16%;
+   background-image: radial-gradient(circle, black 60%, white 100%);
+   z-index: -90;
+   box-shadow: 0 0 17px black;
 }
 
+.vl1{
+   width: 150px;
+   height: 400px;
+   position: absolute;
+   left: 7%;
+   top: 24%;
+   background-image: radial-gradient(circle, black 60%, white 100%);
+   z-index: -100;
+}
 
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  .navi {
-    flex-direction: column;
-    gap: 10px;
-    text-align: left;
-    margin-top: 10px;
-  }
-
-  .navi li a {
-    padding: 8px 12px;
-    font-size: 16px;
-  }
-
-  .logo {
-    font-size: 22px;
-  }
-
-  .welcome {
-    font-size: 20px;
-    position: relative;
-    top: auto;
-    margin-top: 20px;
-    padding: 10px;
-  }
-
-  section {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
-    height: auto;
-  }
-
-  .draggable-window {
-    width: 90vw;
-    height: auto;
-    max-height: 90vh;
-    resize: none;
-    overflow: auto;
-    top: 120px;
-    left: 5vw;
-  }
-
-  .window-body {
-    font-size: 16px;
-  }
+.vl2{
+  width: 150px;
+   height: 400px;
+   position: absolute;
+   left: 32%;
+   top: 24%;
+   background-image: radial-gradient(circle, black 60%, white 100%);
+   z-index: -100;
 }
