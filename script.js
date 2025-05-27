@@ -17,14 +17,12 @@ function animate() {
 }
 animate();
 
-// Cursor grow on hover
 const targets = document.querySelectorAll('.hover-target');
 targets.forEach(target => {
   target.addEventListener('mouseenter', () => cursor.classList.add('cursor-grow'));
   target.addEventListener('mouseleave', () => cursor.classList.remove('cursor-grow'));
 });
 
-// Open/close functions
 function openProfile() {
   document.getElementById('profileWindow').style.display = 'block';
 }
@@ -44,7 +42,6 @@ function closeContact() {
   document.getElementById('contactWindow').style.display = 'none';
 }
 
-// Make draggable windows
 function makeDraggable(windowId, handleId) {
   const win = document.getElementById(windowId);
   const handle = document.getElementById(handleId);
